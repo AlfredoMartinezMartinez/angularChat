@@ -8,6 +8,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { environment } from '../environments/environment';
 
+//servicios
+import {ChatService} from './providers/chat.service';
+
 //componentes
 import { AppComponent } from './app.component';
 import { ChatComponent } from './components/chat/chat.component';
@@ -25,7 +28,7 @@ import { ChatComponent } from './components/chat/chat.component';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     FormsModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
